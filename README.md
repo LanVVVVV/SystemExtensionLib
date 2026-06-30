@@ -4,8 +4,10 @@ SystemExtensionLib is a mod for **Monster Black Market** —— designed to prov
 
 ### Features
 
-- **Mod Configuration Management**<br>
+- **Mod Config Management**<br>
   Manages external configuration files for Mods. It handles directory initialization and resource exporting, creating a separate configuration subdirectory for each Mod.
+- **Extended Info Slot Management**<br>
+  An extended information slot area has been added to the character information panel, along with a registrar method to unify the creation and management of information slots.
 - **Embedded Resource Handling**<br>
   Provides functions to load and export embedded resources. It supports exporting resources from specific namespaces to external files.
 - **File Filtering**<br>

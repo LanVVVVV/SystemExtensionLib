@@ -8,7 +8,7 @@ namespace SystemExtensionLib.Core;
 
 internal static class CallerDebug
 {
-    private static string GenerateAbbreviation(string rawName)
+    internal static string GenerateAbbreviation(string rawName)
     {
         if (string.IsNullOrEmpty(rawName)) return "Unknown";
 
