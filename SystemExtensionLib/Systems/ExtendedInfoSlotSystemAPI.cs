@@ -43,8 +43,7 @@ public partial class ExtendedInfoSlotSystem
         var newSlot = InformationLookExtraction.EmptyDisplaySlot(out var display);
         newSlot.name = $"{CallerDebug.GenerateAbbreviation(modName)}_{slotName}";
 
-        display.labelRs.Value = GetLabelLocalization.Invoke();
-        LabelRsList.Add((display.labelRs, GetLabelLocalization));
+        display.labelRs.SetLabel(GetLabelLocalization);
 
         typeValue = display.typeValue;
 
@@ -73,8 +72,7 @@ public partial class ExtendedInfoSlotSystem
         var newSlot = InformationLookExtraction.EmptyDisplayColorSlot(out var display);
         newSlot.name = $"{CallerDebug.GenerateAbbreviation(modName)}_{slotName}";
 
-        display.labelRs.Value = GetLabelLocalization.Invoke();
-        LabelRsList.Add((display.labelRs, GetLabelLocalization));
+        display.labelRs.SetLabel(GetLabelLocalization);
 
         typeValue = display.typeValue;
 
@@ -107,8 +105,7 @@ public partial class ExtendedInfoSlotSystem
         var newSlot = InformationLookExtraction.EmptyChangeSlot(out var display);
         newSlot.name = $"{CallerDebug.GenerateAbbreviation(modName)}_{slotName}";
 
-        display.labelRfy.Value = GetLabelLocalization.Invoke();
-        LabelRftList.Add((display.labelRfy, GetLabelLocalization));
+        display.labelRfy.SetLabel(GetLabelLocalization);
 
         ComponentTools.AddClickEvent(display.arrowLeft, () => OnLeftArrowClick(display.arrowLeft));
         ComponentTools.AddClickEvent(display.arrowRight, () => OnRightArrowClick(display.arrowRight));

@@ -2,6 +2,7 @@
 
 using MBM.ModLoader.Core;
 using SystemExtensionLib.Systems;
+using SystemExtensionLib.Tools;
 using UnityEngine;
 
 namespace SystemExtensionLib.Core;
@@ -25,7 +26,7 @@ public static class ModEntry
 
     private static void OnLanguageChanged(string langCode)
     {
-        ExtendedInfoSlotSystem.OnLanguageChanged();
+        LabelLocHelpers.OnLanguageChanged();
         Log($"language changed: {langCode}");
     }
 }
