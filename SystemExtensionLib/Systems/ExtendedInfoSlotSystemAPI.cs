@@ -20,7 +20,7 @@ namespace SystemExtensionLib.Systems;
 /// to generate UI nodes, and attaches them to the extended area. It supports language refresh to ensure 
 /// slot labels update automatically when the language changes.
 /// </remarks>
-public partial class ExtendedInfoSlotSystem
+public static partial class ExtendedInfoSlotSystem
 {
     /// <summary>
     /// 注册一个文本显示插槽。<br/>
@@ -134,8 +134,7 @@ public partial class ExtendedInfoSlotSystem
 
         Init();
         FemaleExtendedAreaOrderedDic[modName, slotName] = infoSlot;
-        infoSlot.transform.SetParent(_femaleExtendedAreaContent);
-        infoSlot.transform.localScale = Vector3.one;
+        infoSlot.transform.SetParent(_femaleExtendedAreaContent, false);
         infoSlot.SetActive(true);
         return infoSlot;
     }

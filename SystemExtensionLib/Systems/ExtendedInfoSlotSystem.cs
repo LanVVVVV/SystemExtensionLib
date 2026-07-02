@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace SystemExtensionLib.Systems;
 
-public partial class ExtendedInfoSlotSystem
+public static partial class ExtendedInfoSlotSystem
 {
     private static GameObject? _femaleExtendedArea;
 

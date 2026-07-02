@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace SystemExtensionLib.Utils;
 
-public class InformationLookExtraction
+public static class InformationLookExtraction
 {
     private const float FixedWidth = 178f;
 
@@ -31,6 +31,8 @@ public class InformationLookExtraction
         newSlot.name = "newColorDisplaySlot";
 
         display.labelRs = newSlot.GetComponentInChildren<ReferenceString>(true);
+        display.labelRs.Value = "Unset";
+
 
         display.typeValue = null;
         foreach (var mb in newSlot.GetComponentsInChildren<MonoBehaviour>(true))
@@ -59,6 +61,7 @@ public class InformationLookExtraction
         newSlot.name = "newDisplaySlot";
 
         display.labelRs = newSlot!.transform.Find("Text").GetComponent<ReferenceString>();
+        display.labelRs.Value = "Unset";
 
         display.typeValue = null;
         foreach (var mb in newSlot.GetComponentsInChildren<MonoBehaviour>(true))
@@ -88,6 +91,7 @@ public class InformationLookExtraction
         newSlot.name = "newChangeSlot";
 
         display.labelRfy = newSlot!.transform.Find("Text").GetComponent<ReferenceFormattingText>();
+        display.labelRfy.Value = "Unset";
 
         var newSlotBottomText = newSlot.transform.Find("Bottom/Text");
         foreach (var mb in newSlotBottomText.GetComponents<MonoBehaviour>())
