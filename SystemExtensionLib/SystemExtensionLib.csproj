@@ -4,7 +4,7 @@
     <TargetFramework>net481</TargetFramework>
     <LangVersion>14.0</LangVersion>
     <Nullable>enable</Nullable>
-    <Version>1.1.0.1</Version>
+    <Version>1.1.0.2</Version>
     <Authors>LanFengVVV</Authors>
     <Company>LanFengVVV </Company>
     <Description>$(AssemblyName) Mod for Monster Black Market, using MBM.ModLoader</Description>
@@ -29,6 +29,10 @@
       <HintPath>$(MBM)\MonsterBlackMarket_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>$(MBM)\MonsterBlackMarket_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+	</Reference>
     <Reference Include="MBM.ModLoader">
       <HintPath>$(MBM)\MBM.ModLoader\MBM.ModLoader.dll</HintPath>
       <Private>False</Private>
