@@ -3,6 +3,7 @@
 using MBMScripts;
 using SystemExtensionLib.Tools;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace SystemExtensionLib.Utils;
 
@@ -77,6 +78,30 @@ public static class GalleryExtraction
         flexibleColorPicker.onColorChange.RemoveAllListeners();
 
         return newSlot;
+    }
+
+    public static GameObject OnlyColorPicker(
+    out FlexibleColorPicker flexibleColorPicker
+    )
+    {
+        var colorPicker = EmptyGalleryColorSlot(
+            out var _,
+            out flexibleColorPicker);
+
+        colorPicker.name = "Color Picker";
+
+        var colorPickerRT = colorPicker.GetComponent<RectTransform>();
+        colorPickerRT.anchorMin = Vector2.zero;
+        colorPickerRT.anchorMax = Vector2.one;
+        colorPickerRT.pivot = Vector2.up;
+        colorPickerRT.anchoredPosition = Vector2.zero;
+        colorPickerRT.offsetMin = Vector2.zero;
+        colorPickerRT.offsetMax = Vector2.zero;
+
+        GameObject.DestroyImmediate(colorPickerRT.Find("Text (TMP)").gameObject);
+        GameObject.DestroyImmediate(colorPicker.GetComponent<Image>());
+
+        return colorPicker;
     }
 
     private static void Init()

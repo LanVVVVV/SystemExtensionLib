@@ -29,7 +29,7 @@ public static class ComponentTools
     {
         foreach (var mb in button.GetComponentsInChildren<MonoBehaviour>())
         {
-            if (mb is InteractionClickEvent or InteractionUnit)
+            if (mb is InteractionClickEvent or InteractionUnit or InteractionWindow)
             {
                 GameObject.DestroyImmediate(mb);
             }
