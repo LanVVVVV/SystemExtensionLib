@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Properties\window_interface_ExtendedArea.png">
+    <EmbeddedResource Include="Sprites\window_interface_ExtendedArea.png">
 	  <LogicalName>window_interface_ExtendedArea.png</LogicalName>
 	</EmbeddedResource>
   </ItemGroup>
@@ -69,6 +69,10 @@
       <HintPath>$(MBM)\MonsterBlackMarket_Data\Managed\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>

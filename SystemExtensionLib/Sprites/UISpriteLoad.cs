@@ -3,7 +3,7 @@ using System.Reflection;
 using SystemExtensionLib.Core;
 using UnityEngine;
 
-namespace SystemExtensionLib.Utils;
+namespace SystemExtensionLib.Sprites;
 
 internal static class UISpriteLoad
 {
