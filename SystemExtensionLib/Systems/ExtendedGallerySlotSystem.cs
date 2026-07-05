@@ -51,3 +51,18 @@ public static partial class ExtendedGallerySlotSystem
     private static readonly AccessTools.FieldRef<CustomFitter, RectTransform[]> rectformArrayRef =
             AccessTools.FieldRefAccess<CustomFitter, RectTransform[]>("m_RectTransformArray");
 }
+
+public enum AppLayout
+{
+    Left,
+    Right,
+    Color
+}
+
+public enum InsertPoint
+{
+    First,
+    Last,
+    Above,
+    Below
+}

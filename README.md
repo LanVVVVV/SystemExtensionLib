@@ -4,23 +4,44 @@ SystemExtensionLib is a mod for **Monster Black Market** —— designed to prov
 
 ### Features
 
-- **Mod Config Management**<br>
-  Manages external configuration files for Mods. It handles directory initialization and resource exporting, creating a separate configuration subdirectory for each Mod.
-- **Extended Info Slot Management**<br>
-  An extended information slot area has been added to the character information panel, along with a registrar method to unify the creation and management of information slots.
-- **Embedded Resource Handling**<br>
-  Provides functions to load and export embedded resources. It supports exporting resources from specific namespaces to external files.
-- **File Filtering**<br>
-  Includes a tool for building file filtering logic. Developers can combine conditions to create rules for matching files by extension, folder path, or wildcard patterns.
-- **File and Path Utilities**<br>
-  Offers basic helper functions for file and path operations, such as directory creation and path conversion.
+- **Mod Config Management**
+  - Automatically initializes directories
+  - Exports Config files
+  - Manages external Config files
+  - Each Mod has its own independent Config subdirectory
+
+- **Extended Info Slot Management**
+  - Adds an extended info slot area to the character information panel
+  - Provides registration methods to unify the creation and management of extended info slots in Extended Area
+  - Supports registering visibility conditions through a management component
+
+- **Gallery Extended Info Slot Extension**
+  - Provides registration methods to unify the creation and management of Gallery extended info slots
+  - Allows other Mods to add or modify slots in the gallery interface
+  - Supports automatic adjustment of layout background size
+
+- **Embedded Resource Handling**
+  - Provides functions to load and export embedded resources
+  - Supports export from specific namespaces to external files
+
+- **File Filtering Tools**
+  - Offers utilities to build file filtering logic
+  - Developers can combine conditions to match files by extension, folder path, or wildcard patterns
+
+- **File and Path Utilities**
+  - Provides helper functions for file and path operations
+  - Includes directory creation and path conversion
+
+- **UI Localization Helpers**
+  - Supplies localization support for `ReferenceString` and `ReferenceFormattingText` components
+  - Simplifies multilingual UI development
 
 ### Requirements
 
-| Dependency           | Version   |
-| -------------------- | --------- |
-| MBM.ModLoader        | ≥ 0.6.0   |
-| Monster Black Market | ≥ 2.1.2.0 |
+| Dependency           | Version   | Link |
+| -------------------- | --------- | ---- |
+| Monster Black Market | ≥ 2.1.2.0 |      |
+| MBM.ModLoader        | ≥ 0.7.1    | [F95Zone](https://f95zone.to/threads/monster-black-market-mbm-modloader-0-7-1.290109/) |
 
 ### For Other Modders
 

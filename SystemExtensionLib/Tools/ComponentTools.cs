@@ -1,6 +1,4 @@
-﻿#pragma warning disable CS1591
-
-using HarmonyLib;
+﻿using HarmonyLib;
 using MBMScripts;
 using System;
 using System.Collections.Generic;

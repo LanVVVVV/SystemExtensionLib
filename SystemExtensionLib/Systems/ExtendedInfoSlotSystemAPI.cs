@@ -1,5 +1,6 @@
 ﻿using MBMScripts;
 using System;
+using System.Collections.Generic;
 using SystemExtensionLib.Core;
 using SystemExtensionLib.Tools;
 using SystemExtensionLib.Utils;
@@ -9,9 +10,9 @@ namespace SystemExtensionLib.Systems;
 
 /// <summary>
 /// 扩展信息插槽系统。<br/>
-/// 用于在女性信息窗口中动态注入扩展区域，并注册不同类型的插槽（文本、颜色、切换）。<para/>
+/// 用于在信息窗口中动态注入扩展区域，并注册不同类型的插槽（文本、颜色、切换）。<para/>
 /// Extended Info Slot System.<br/>
-/// Provides dynamic injection of extended UI areas in the Female Information window, 
+/// Provides dynamic injection of extended UI areas in the Information window, 
 /// and supports registration of multiple slot types (text, color, change).
 /// </summary>
 /// <remarks>
@@ -26,10 +27,16 @@ public static partial class ExtendedInfoSlotSystem
     /// <summary>
     /// 注册一个文本显示插槽。<br/>
     /// Registers a text display slot.<para/>
+    /// 创建两个切换插槽，设置标签本地化，并为左右箭头绑定点击事件。<br/>
+    /// Creates two change slots, assigns localized labels, and binds click events to left/right arrows.<para/>
     /// 将插槽挂载到扩展区域，并加入有序字典管理。<br/>
     /// Attaches the slot to the extended area and registers it in the ordered dictionary.<para/>
     /// 信息文本的 Reference Component 需手动挂载。<br/>
-    /// Informational text Reference Component that requires manual attachment.
+    /// Informational text Reference Component that requires manual attachment.<para/>
+    /// 可使用 <see cref="ComponentTools.SetReferenceArray{TUpdater}(TUpdater,List{Reference},string)"/> 
+    /// 辅助绑定 Reference 与 Updater 组件。<br/>
+    /// Use <see cref="ComponentTools.SetReferenceArray{TUpdater}(TUpdater,List{Reference},string)"/> 
+    /// to assist in binding.
     /// </summary>
     /// <param name="modName">Mod 名称。<br/>Name of the Mod.</param>
     /// <param name="slotName">插槽名称。<br/>Name of the slot.</param>
@@ -58,7 +65,11 @@ public static partial class ExtendedInfoSlotSystem
     /// 将插槽挂载到扩展区域，并加入有序字典管理。<br/>
     /// Attaches the slot to the extended area and registers it in the ordered dictionary.<para/>
     /// 信息文本的 Reference Component 需手动挂载。<br/>
-    /// Informational text Reference Component that requires manual attachment.
+    /// Informational text Reference Component that requires manual attachment.<para/>
+    /// 可使用 <see cref="ComponentTools.SetReferenceArray{TUpdater}(TUpdater,List{Reference},string)"/> 
+    /// 辅助绑定 Reference 与 Updater 组件。<br/>
+    /// Use <see cref="ComponentTools.SetReferenceArray{TUpdater}(TUpdater,List{Reference},string)"/> 
+    /// to assist in binding.
     /// </summary>
     /// <param name="modName">Mod 名称。<br/>Name of the Mod.</param>
     /// <param name="slotName">插槽名称。<br/>Name of the slot.</param>
@@ -87,7 +98,11 @@ public static partial class ExtendedInfoSlotSystem
     /// 将插槽挂载到扩展区域，并加入有序字典管理。<br/>
     /// Attaches the slot to the extended area and registers it in the ordered dictionary.<para/>
     /// 信息文本的 Reference Component 需手动挂载。<br/>
-    /// Informational text Reference Component that requires manual attachment.
+    /// Informational text Reference Component that requires manual attachment.<para/>
+    /// 可使用 <see cref="ComponentTools.SetReferenceArray{TUpdater}(TUpdater,List{Reference},string)"/> 
+    /// 辅助绑定 Reference 与 Updater 组件。<br/>
+    /// Use <see cref="ComponentTools.SetReferenceArray{TUpdater}(TUpdater,List{Reference},string)"/> 
+    /// to assist in binding.
     /// </summary>
     /// <param name="modName">Mod 名称。<br/>Name of the Mod.</param>
     /// <param name="slotName">插槽名称。<br/>Name of the slot.</param>
@@ -140,6 +155,19 @@ public static partial class ExtendedInfoSlotSystem
         return infoSlot;
     }
 
+    /// <summary>
+    /// 注册女性扩展插槽的可见性条件。<br/>
+    /// Registers a visibility condition for a female extended slot.<para/>
+    /// 初始化女性扩展区域（如未初始化），并将指定的可见性条件委托注册到扩展区域管理器。<br/>
+    /// Initializes the female extended area (if not already initialized) and 
+    /// registers the provided visibility condition delegate into the extended area manager.
+    /// </summary>
+    /// <param name="modName">Mod 名称。<br/>Name of the Mod.</param>
+    /// <param name="slotName">插槽名称。<br/>Name of the slot.</param>
+    /// <param name="visibilityCondition">
+    /// 判断角色是否满足显示条件的委托。<br/>
+    /// Delegate that evaluates whether a character meets the condition for slot visibility.
+    /// </param>
     public static void RegisterFemaleExtendedSlotVisibilityCondition(
         string modName, string slotName,
         Func<Character, bool> visibilityCondition)
