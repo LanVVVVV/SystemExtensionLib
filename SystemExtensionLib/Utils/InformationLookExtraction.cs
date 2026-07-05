@@ -120,7 +120,8 @@ public static class InformationLookExtraction
         return newSlot;
     }
 
-    internal static GameObject ExtendedArea()
+    internal static GameObject ExtendedArea(
+        out GameObject content)
     {
         if (UISpriteLoad.InterfaceExtendedArea is null)
             UISpriteLoad.LoadSprite();
@@ -158,7 +159,7 @@ public static class InformationLookExtraction
 
         // === Content ===
         var rootcontent = _informationLook.Find("Content/Upper Left").gameObject;
-        var content = GameObject.Instantiate(rootcontent, panelRT);
+        content = GameObject.Instantiate(rootcontent, panelRT);
 
         content.name = "Content";
         for (int i = content.transform.childCount - 1; i >= 0; i--)

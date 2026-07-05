@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MBMScripts;
+using System;
 using SystemExtensionLib.Core;
 using SystemExtensionLib.Tools;
 using SystemExtensionLib.Utils;
@@ -124,7 +125,9 @@ public static partial class ExtendedInfoSlotSystem
     /// <param name="slotName">插槽名称。<br/>Name of the slot.</param>
     /// <param name="infoSlot">插槽对象。<br/>The slot GameObject.</param>
     /// <returns>成功挂载的插槽对象，或 null。<br/>The attached slot GameObject, or null if failed.</returns>
-    public static GameObject? RegisterFemaleExtendedSlot(string modName, string slotName, GameObject infoSlot)
+    public static GameObject? RegisterFemaleExtendedSlot(
+        string modName, string slotName,
+        GameObject infoSlot)
     {
         if (infoSlot is null)
         {
@@ -132,10 +135,16 @@ public static partial class ExtendedInfoSlotSystem
             return null;
         }
 
-        Init();
-        FemaleExtendedAreaOrderedDic[modName, slotName] = infoSlot;
-        infoSlot.transform.SetParent(_femaleExtendedAreaContent, false);
-        infoSlot.SetActive(true);
+        InitFemaleExtendedArea();
+        femaleExtendedAreaManager!.RegisterExtendedSlot(modName, slotName, infoSlot);
         return infoSlot;
+    }
+
+    public static void RegisterFemaleExtendedSlotVisibilityCondition(
+        string modName, string slotName,
+        Func<Character, bool> visibilityCondition)
+    {
+        InitFemaleExtendedArea();
+        femaleExtendedAreaManager!.RegisterVisibilityCondition((modName, slotName), visibilityCondition);
     }
 }
