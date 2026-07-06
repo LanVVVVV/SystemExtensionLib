@@ -4,12 +4,12 @@
     <TargetFramework>net481</TargetFramework>
     <LangVersion>14.0</LangVersion>
     <Nullable>enable</Nullable>
-    <Version>1.2.0.1</Version>
+    <Version>1.2.1.1</Version>
     <Authors>LanFengVVV</Authors>
     <Company>LanFengVVV </Company>
     <Description>$(AssemblyName) Mod for Monster Black Market, using MBM.ModLoader</Description>
-	<MBM>..\..\..\MBM.ModLoader\Monster_Black_Market_v2.1.1.0DLC - MBM.ModLoader</MBM>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<MBM>..\..\..\MBM.ModLoader For v2.1.2.0\Monster_Black_Market_v2.1.2.0 - MBM.ModLoader</MBM>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -46,7 +46,7 @@
 	  <Private>False</Private>
 	</Reference>
 	<Reference Include="Unity.TextMeshPro">
-	  <HintPath>..\..\..\MBM.ModLoader For v2.1.2.0\Monster_Black_Market_v2.1.2.0 - MBM.ModLoader\MonsterBlackMarket_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+	  <HintPath>$(MBM)\MonsterBlackMarket_Data\Managed\Unity.TextMeshPro.dll</HintPath>
 	  <Private>False</Private>
 	</Reference>
     <Reference Include="UnityEngine">

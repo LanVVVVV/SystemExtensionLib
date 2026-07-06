@@ -15,7 +15,8 @@ public static class ModEntry
     {
         ConfigSystem.Initialize();
 
-        Localization.OnLanguageChanged += OnLanguageChanged;
+        Loader.OnAllModsLoaded += () => Localization.OnLanguageChanged += OnLanguageChanged;
+
         Log($"{ModName} Mod loaded!");
     }
     internal static void Log(string msg) => Debug.Log($"[SEL] {msg}");
