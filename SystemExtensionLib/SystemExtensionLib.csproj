@@ -4,10 +4,10 @@
     <TargetFramework>net481</TargetFramework>
     <LangVersion>14.0</LangVersion>
     <Nullable>enable</Nullable>
-    <Version>1.2.1.1</Version>
+    <Version>1.2.2.0</Version>
     <Authors>LanFengVVV</Authors>
     <Company>LanFengVVV </Company>
-    <Description>$(AssemblyName) Mod for Monster Black Market, using MBM.ModLoader</Description>
+    <Description>MBM.ModLoader mod for Monster Black Market — A library mod that provides ExtensionSystem APIs and shared utilities for other mods.</Description>
 	<MBM>..\..\..\MBM.ModLoader For v2.1.2.0\Monster_Black_Market_v2.1.2.0 - MBM.ModLoader</MBM>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>

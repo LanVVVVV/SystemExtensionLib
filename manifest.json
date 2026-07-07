@@ -1,0 +1,22 @@
+﻿{
+  "version": 1,
+  "author": "LanFengVVV",
+  "mods": [
+    {
+      "id": "SystemExtensionLib",
+      "name": "SystemExtensionLib",
+      "description": "MBM.ModLoader mod for Monster Black Market — A library mod that provides ExtensionSystem APIs and shared utilities for other mods.",
+      "version": "1.2.2",
+      "package": "https://github.com/LanVVVVV/SystemExtensionLib/releases/download/v1.2.2/SystemExtensionLib.v1.2.2.zip",
+      "icon": "",
+      "modPortal": "https://f95zone.to/threads/monster-black-market-systemextensionlib-mod.304755/",
+      "dependencies": "",
+      "gameVersion": "2.1.2.0",
+      "changelog": "",
+      "categories": [ "UI", "Library" ],
+      "tags": ["Characters"],
+      "downloads": 0,
+      "updated": "2026-07-07"
+    }
+  ]
+}
